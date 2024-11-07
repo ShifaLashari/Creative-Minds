@@ -31,5 +31,34 @@
     </div>
 
     <script src="script.js"></script>
+	// script.js
+
+// Select the form and talent list elements
+const talentForm = document.getElementById('talentForm');
+const talentList = document.getElementById('talentList');
+
+// Function to add a new talent entry
+function addTalent(name, description) {
+    const entry = document.createElement('div');
+    entry.classList.add('talent-entry');
+    entry.innerHTML = `<strong>${name}</strong><p>${description}</p>`;
+    talentList.appendChild(entry);
+}
+
+// Event listener for the form submission
+talentForm.addEventListener('submit', function(event) {
+    event.preventDefault();  // Prevent page from reloading on submit
+
+    // Get values from the input fields
+    const name = document.getElementById('talentName').value;
+    const description = document.getElementById('talentDescription').value;
+
+    // Add the new talent entry to the list
+    addTalent(name, description);
+
+    // Clear the form fields
+    talentForm.reset();
+});
+
 </body>
 </html>
