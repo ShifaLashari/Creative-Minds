@@ -11,20 +11,20 @@
             margin: 0;
             padding: 0;
             color: #333;
-            background-image: url('https://example.com/your-background.gif'); /* Replace with your GIF URL */
+            background-image: url('https://images.app.goo.gl/MQ4P1xMdgsVERuM59'); /* Replace with your GIF URL */
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
             background-attachment: fixed;
         }
         header {
-            background-color: rgba(76, 175, 80, 0.8);
+            background-color: rgba(76, 175, 80, 0.8); /* Slight transparency */
             color: white;
             text-align: center;
             padding: 1em 0;
         }
         nav {
-            background-color: rgba(51, 51, 51, 0.8);
+            background-color: rgba(51, 51, 51, 0.8); /* Slight transparency */
             color: white;
             padding: 1em;
             text-align: center;
@@ -37,7 +37,7 @@
         }
         .container {
             padding: 20px;
-            background-color: rgba(255, 255, 255, 0.9);
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent for readability */
             max-width: 800px;
             margin: 20px auto;
             border-radius: 8px;
@@ -84,11 +84,6 @@
         input[type="submit"]:hover, input[type="reset"]:hover {
             background-color: #45a049;
         }
-        .char-count {
-            font-size: 14px;
-            color: #666;
-            text-align: right;
-        }
     </style>
 </head>
 <body>
@@ -105,54 +100,9 @@
         <h2>Join Creative Minds</h2>
         <p>Fill out the form below to join our community and showcase your talent.</p>
         
-        <form onsubmit="return submitForm()">
-            <!-- Dropdown for Nationality -->
-            <label for="nationality">Select your nationality:</label>
-            <select id="nationality" name="nationality">
-                <option value="select">--Please Select--</option>
-                <option value="american">American</option>
-                <option value="british">British</option>
-                <option value="canadian">Canadian</option>
-                <option value="australian">Australian</option>
-                <option value="other">Other</option>
-            </select>
-            
-            <!-- Text Field for Age -->
-            <label for="age">Enter your age:</label>
-            <input type="text" id="age" name="age" placeholder="Enter your age">
-            
-            <!-- Text Field for Email -->
-            <label for="email">Email Address:</label>
-            <input type="email" id="email" name="email" placeholder="Enter your email">
-            
-            <!-- Bio/Description with Character Count -->
-            <label for="bio">Bio/Description:</label>
-            <textarea id="bio" name="bio" rows="4" placeholder="Tell us about yourself" oninput="updateCharCount()"></textarea>
-            <div class="char-count" id="char-count">0 / 150 characters</div>
-            
-            <!-- Submit Button -->
-            <input type="submit" value="Submit">
+        <form>
+            <!-- Form Fields Here -->
         </form>
     </div>
-
-    <script>
-        // Function to update character count for the Bio field
-        function updateCharCount() {
-            const bio = document.getElementById('bio');
-            const charCount = document.getElementById('char-count');
-            charCount.textContent = `${bio.value.length} / 150 characters`;
-            if (bio.value.length > 150) {
-                charCount.style.color = 'red';
-            } else {
-                charCount.style.color = '#666';
-            }
-        }
-
-        // Function to handle form submission with alert
-        function submitForm() {
-            alert("Thank you for submitting the form!");
-            return true; // Proceed with form submission
-        }
-    </script>
 </body>
 </html>
