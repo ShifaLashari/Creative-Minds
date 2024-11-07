@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Minds</title>
+    <style>
+        /* Basic styling for an aesthetically pleasing look */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+            color: #333;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 1em;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .container {
+            padding: 20px;
+        }
+        form {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        select, input[type="text"], input[type="radio"] {
+            margin-top: 5px;
+            padding: 8px;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        input[type="radio"] {
+            width: auto;
+            margin-right: 10px;
+        }
+        .gender-options {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Creative Minds</h1>
+        <p>Showcase Your Talents and Explore the Creativity of Others!</p>
+    </header>
+    <nav>
+        <a href="#showcase">Showcase</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <div class="container">
+        <h2>Join Creative Minds</h2>
+        <p>Fill out the form below to join our community and showcase your talent.</p>
+        
+        <form>
+            <!-- Dropdown for Nationality -->
+            <label for="nationality">Select your nationality:</label>
+            <select id="nationality" name="nationality">
+                <option value="select">--Please Select--</option>
+                <option value="american">American</option>
+                <option value="british">British</option>
+                <option value="canadian">Canadian</option>
+                <option value="australian">Australian</option>
+                <option value="other">Other</option>
+            </select>
+            
+            <!-- Text Field for Age -->
+            <label for="age">Enter your age:</label>
+            <input type="text" id="age" name="age" placeholder="Enter your age">
+            
+            <!-- Radio Buttons for Gender -->
+            <label>Gender:</label>
+            <div class="gender-options">
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label>
+                
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label>
+                
+            </div>
+        </form>
+    </div>
+</body>
+</html>
