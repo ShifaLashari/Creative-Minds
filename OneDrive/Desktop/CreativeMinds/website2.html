@@ -47,7 +47,7 @@
             margin-top: 10px;
             font-weight: bold;
         }
-        select, input[type="text"], input[type="radio"] {
+        input[type="text"], input[type="email"], input[type="file"], select, textarea {
             margin-top: 5px;
             padding: 8px;
             width: 100%;
@@ -55,14 +55,26 @@
             border-radius: 4px;
             font-size: 16px;
         }
-        input[type="radio"] {
-            width: auto;
-            margin-right: 10px;
+        input[type="radio"], input[type="checkbox"] {
+            margin-right: 5px;
         }
-        .gender-options {
+        .gender-options, .interests-options {
             display: flex;
             gap: 10px;
             align-items: center;
+        }
+        input[type="submit"], input[type="reset"] {
+            margin-top: 20px;
+            padding: 10px 20px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover, input[type="reset"]:hover {
+            background-color: #45a049;
         }
     </style>
 </head>
@@ -105,7 +117,44 @@
                 <input type="radio" id="female" name="gender" value="female">
                 <label for="female">Female</label>
                 
+                <input type="radio" id="other" name="gender" value="other">
+                <label for="other">Other</label>
             </div>
+            
+            <!-- Text Field for Email -->
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email">
+            
+            <!-- File Upload for Profile Picture -->
+            <label for="profile-pic">Upload Profile Picture:</label>
+            <input type="file" id="profile-pic" name="profile-pic">
+            
+            <!-- Textarea for Bio/Description -->
+            <label for="bio">Bio/Description:</label>
+            <textarea id="bio" name="bio" rows="4" placeholder="Tell us about yourself"></textarea>
+            
+            <!-- Checkboxes for Interests -->
+            <label>Interests/Talents:</label>
+            <div class="interests-options">
+                <input type="checkbox" id="art" name="interests" value="art">
+                <label for="art">Art</label>
+                
+                <input type="checkbox" id="music" name="interests" value="music">
+                <label for="music">Music</label>
+                
+                <input type="checkbox" id="writing" name="interests" value="writing">
+                <label for="writing">Writing</label>
+                
+                <input type="checkbox" id="tech" name="interests" value="tech">
+                <label for="tech">Technology</label>
+                
+                <input type="checkbox" id="other-talent" name="interests" value="other">
+                <label for="other-talent">Other</label>
+            </div>
+            
+            <!-- Submit and Reset Buttons -->
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
         </form>
     </div>
 </body>
