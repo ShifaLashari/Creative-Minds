@@ -10,17 +10,21 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f0f8ff;
             color: #333;
+            background-image: url('https://images.app.goo.gl/MQ4P1xMdgsVERuM59'); /* Replace with your GIF URL */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
         }
         header {
-            background-color: #4CAF50;
+            background-color: rgba(76, 175, 80, 0.8); /* Slight transparency */
             color: white;
             text-align: center;
             padding: 1em 0;
         }
         nav {
-            background-color: #333;
+            background-color: rgba(51, 51, 51, 0.8); /* Slight transparency */
             color: white;
             padding: 1em;
             text-align: center;
@@ -33,12 +37,16 @@
         }
         .container {
             padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent for readability */
+            max-width: 800px;
+            margin: 20px auto;
+            border-radius: 8px;
         }
         form {
             max-width: 600px;
             margin: 20px auto;
             padding: 20px;
-            background-color: #fff;
+            background-color: rgba(255, 255, 255, 0.9);
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
@@ -93,68 +101,7 @@
         <p>Fill out the form below to join our community and showcase your talent.</p>
         
         <form>
-            <!-- Dropdown for Nationality -->
-            <label for="nationality">Select your nationality:</label>
-            <select id="nationality" name="nationality">
-                <option value="select">--Please Select--</option>
-                <option value="american">American</option>
-                <option value="british">British</option>
-                <option value="canadian">Canadian</option>
-                <option value="australian">Australian</option>
-                <option value="other">Other</option>
-            </select>
-            
-            <!-- Text Field for Age -->
-            <label for="age">Enter your age:</label>
-            <input type="text" id="age" name="age" placeholder="Enter your age">
-            
-            <!-- Radio Buttons for Gender -->
-            <label>Gender:</label>
-            <div class="gender-options">
-                <input type="radio" id="male" name="gender" value="male">
-                <label for="male">Male</label>
-                
-                <input type="radio" id="female" name="gender" value="female">
-                <label for="female">Female</label>
-                
-                <input type="radio" id="other" name="gender" value="other">
-                <label for="other">Other</label>
-            </div>
-            
-            <!-- Text Field for Email -->
-            <label for="email">Email Address:</label>
-            <input type="email" id="email" name="email" placeholder="Enter your email">
-            
-            <!-- File Upload for Profile Picture -->
-            <label for="profile-pic">Upload Profile Picture:</label>
-            <input type="file" id="profile-pic" name="profile-pic">
-            
-            <!-- Textarea for Bio/Description -->
-            <label for="bio">Bio/Description:</label>
-            <textarea id="bio" name="bio" rows="4" placeholder="Tell us about yourself"></textarea>
-            
-            <!-- Checkboxes for Interests -->
-            <label>Interests/Talents:</label>
-            <div class="interests-options">
-                <input type="checkbox" id="art" name="interests" value="art">
-                <label for="art">Art</label>
-                
-                <input type="checkbox" id="music" name="interests" value="music">
-                <label for="music">Music</label>
-                
-                <input type="checkbox" id="writing" name="interests" value="writing">
-                <label for="writing">Writing</label>
-                
-                <input type="checkbox" id="tech" name="interests" value="tech">
-                <label for="tech">Technology</label>
-                
-                <input type="checkbox" id="other-talent" name="interests" value="other">
-                <label for="other-talent">Other</label>
-            </div>
-            
-            <!-- Submit and Reset Buttons -->
-            <input type="submit" value="Submit">
-            <input type="reset" value="Reset">
+            <!-- Form Fields Here -->
         </form>
     </div>
 </body>
